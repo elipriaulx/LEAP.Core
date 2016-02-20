@@ -1,0 +1,10 @@
+﻿namespace LEAP.Core.Types
+{
+    public enum AnprReadVehicleViewTypes
+    {
+        Unspecified = 0,
+        FrontPlate = 10,
+        RearPlate = 20,
+        NoPlate = 30,
+    }
+}
