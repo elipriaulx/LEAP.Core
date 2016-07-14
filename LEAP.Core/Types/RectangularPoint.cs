@@ -1,4 +1,4 @@
-﻿namespace LEAP.Core.Components
+﻿namespace LEAP.Core.Types
 {
     public struct RectangularPoint
     {

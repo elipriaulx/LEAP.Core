@@ -39,14 +39,18 @@
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Components\GeoSummary.cs" />
-    <Compile Include="Components\RectangularPoint.cs" />
-    <Compile Include="Components\RectangularQuadrilateral.cs" />
-    <Compile Include="Contracts\IAnprReadEngineSummary.cs" />
+    <Compile Include="Contracts\IAnprReadBatch.cs" />
+    <Compile Include="Contracts\IAnprReadNote.cs" />
+    <Compile Include="Contracts\IAnprReadTag.cs" />
+    <Compile Include="Contracts\IAnprSyntaxSummary.cs" />
+    <Compile Include="Types\GeoSummary.cs" />
+    <Compile Include="Types\RectangularPoint.cs" />
+    <Compile Include="Types\RectangularQuadrilateral.cs" />
+    <Compile Include="Contracts\IAnprEngineSummary.cs" />
     <Compile Include="Contracts\IAnprRead.cs" />
     <Compile Include="Contracts\IAnprReadCorrection.cs" />
     <Compile Include="Contracts\IAnprReadSource.cs" />
-    <Compile Include="Contracts\IAnprReadPersonnelSummary.cs" />
+    <Compile Include="Contracts\IAnprPersonnelSummary.cs" />
     <Compile Include="Exceptions\LeapException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Types\AnprReadCorrectionStatusTypes.cs" />

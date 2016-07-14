@@ -5,7 +5,7 @@ namespace LEAP.Core.Contracts
 {
     public interface IAnprReadCorrection
     {
-        DateTime Date { get; set; }
+        DateTime CorrectionDate { get; }
 
         string OriginalText { get; }
         string CorrectedText { get; }
@@ -13,6 +13,6 @@ namespace LEAP.Core.Contracts
         AnprReadCorrectionStatusTypes Status { get; }
         string Description { get; }
 
-        IAnprReadPersonnelSummary User { get; }
+        IAnprPersonnelSummary User { get; }
     }
 }

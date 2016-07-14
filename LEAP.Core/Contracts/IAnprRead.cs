@@ -1,5 +1,5 @@
 ﻿using System;
-using LEAP.Core.Components;
+using System.Collections.Generic;
 using LEAP.Core.Types;
 
 namespace LEAP.Core.Contracts
@@ -7,30 +7,36 @@ namespace LEAP.Core.Contracts
     public interface IAnprRead
     {
         Guid Id { get; }
-        DateTime CaptureTime { get; }
+        DateTime Captured { get; }
 
         string PlateText { get; }
-        AnprReadVehicleViewTypes View { get; }
+        AnprReadVehicleViewTypes VehicleView { get; }
 
         double Confidence { get; }
-        double[] CharacterConfidence { get; }
+        IEnumerable<double> CharacterConfidence { get; }
 
         GeoSummary? Location { get; }
         Guid? LocationId { get; }
         
-        string PatchImage { get; }
+        byte[] PatchImageBytes { get; }
         RectangularPoint PatchSize { get; }
 
-        string ResultImage { get; }
+        byte[] ResultImageBytes { get; }
         RectangularPoint ResultSize { get; }
         RectangularQuadrilateral? ResultPatchRegion { get; }
-        
-        string[] OverviewImages { get; }
-        
-        string Notes { get; }
+        RectangularQuadrilateral? ResultPatchArea { get; }
 
-        IAnprReadEngineSummary Engine { get; }
+        byte[] OverviewImageBytes { get; }
+        
+        IEnumerable<IAnprReadNote> Notes { get; }
+
+        IEnumerable<IAnprReadTag> Tags { get; }
+
+        IAnprEngineSummary Engine { get; }
+        IAnprSyntaxSummary Syntax { get; }
         IAnprReadSource Source { get; }
         IAnprReadCorrection Correction { get; }
+
+        IEnumerable<KeyValuePair<string, string>> Meta { get; }
     }
 }

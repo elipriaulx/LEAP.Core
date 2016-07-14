@@ -15,5 +15,8 @@ namespace LEAP.Core.Contracts
         
         Guid SiteId { get; }
         string SiteName { get; }
+
+        Guid CollectionId { get; }
+        string CollectionName { get; }
     }
 }
