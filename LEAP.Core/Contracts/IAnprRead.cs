@@ -18,15 +18,15 @@ namespace LEAP.Core.Contracts
         GeoSummary? Location { get; }
         Guid? LocationId { get; }
         
-        byte[] PatchImageBytes { get; }
+        string PatchImageString { get; }
         RectangularPoint PatchSize { get; }
 
-        byte[] ResultImageBytes { get; }
+        string ResultImageString { get; }
         RectangularPoint ResultSize { get; }
         RectangularQuadrilateral? ResultPatchRegion { get; }
         RectangularQuadrilateral? ResultPatchArea { get; }
 
-        byte[] OverviewImageBytes { get; }
+        IEnumerable<string> OverviewImageStrings { get; }
         
         IEnumerable<IAnprReadNote> Notes { get; }
 
